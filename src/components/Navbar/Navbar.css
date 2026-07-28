@@ -8,20 +8,17 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-
   height: 80px;
   width: 100%;
-
   background: #0b1030;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   padding: 0 8%;
 }
 
 /* Logo */
+
 .logo {
   color: #d8d8d8;
   font-size: 2rem;
@@ -30,7 +27,8 @@
   cursor: pointer;
 }
 
-/* Desktop Menu */
+/* Navigation */
+
 .nav-links {
   display: flex;
   list-style: none;
@@ -45,62 +43,81 @@
 }
 
 .nav-links a:hover {
-  color: #ffffff;
+  color: white;
 }
 
 /* Right Side */
+
 .nav-right {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 18px;
 }
+
+/* Connect Button */
+
+.connect-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 26px;
+
+  background: linear-gradient(135deg, #8a5cff, #6d28d9);
+
+  color: white;
+  text-decoration: none;
+
+  border-radius: 12px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  transition: 0.3s ease;
+
+  white-space: nowrap;
+}
+
+.connect-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(138, 92, 255, 0.35);
+}
+
+.desktop-text {
+  display: inline;
+}
+
+.mobile-text {
+  display: none;
+}
+
+/* Moon */
 
 .moon-icon {
   color: white;
   cursor: pointer;
-  transition: 0.3s;
 }
 
 .moon-icon:hover {
   color: #8a5cff;
 }
 
-/* Button */
-.connect-btn {
-  background: #7b86ff;
-  color: white;
-  border: none;
-  padding: 14px 28px;
-  border-radius: 12px;
-  font-size: 15px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: 0.3s;
-  text-decoration: none;
-}
+/* Menu */
 
-.connect-btn:hover {
-  background: #8a5cff;
-  transform: translateY(-2px);
-}
-
-/* Mobile Menu Icon */
 .menu-icon {
   display: none;
   color: white;
   cursor: pointer;
 }
 
-/* ===================== */
-/* Tablet */
-/* ===================== */
+/* ================= Tablet ================= */
+
 @media (max-width: 992px) {
   .navbar {
     padding: 0 5%;
   }
 
   .logo {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
   }
 
   .nav-links {
@@ -109,63 +126,99 @@
 
   .connect-btn {
     padding: 12px 20px;
+    font-size: 14px;
   }
 }
 
-/* ===================== */
-/* Mobile */
-/* ===================== */
+/* ================= Mobile ================= */
+
 @media (max-width: 768px) {
-  .connect-btn,
+  .navbar {
+    height: 70px;
+    padding: 0 15px;
+  }
+
+  .logo {
+    font-size: 1.25rem;
+  }
+
   .moon-icon {
     display: none;
+  }
+
+  .desktop-text {
+    display: none;
+  }
+
+  .mobile-text {
+    display: inline;
+  }
+
+  .connect-btn {
+    padding: 8px 14px;
+
+    font-size: 12px;
+
+    border-radius: 8px;
   }
 
   .menu-icon {
     display: block;
   }
 
+  .nav-right {
+    gap: 10px;
+  }
+
   .nav-links {
     position: absolute;
-    top: 80px;
+
+    top: 70px;
+
     left: -100%;
 
     width: 100%;
+
     background: #0b1030;
 
+    display: flex;
+
     flex-direction: column;
+
     align-items: center;
+
     gap: 25px;
 
     padding: 30px 0;
 
-    transition: 0.4s ease;
+    transition: left 0.4s ease;
   }
 
   .nav-links.active {
     left: 0;
   }
-
-  .nav-links a {
-    font-size: 1.2rem;
-  }
-
-  .logo {
-    font-size: 1.5rem;
-  }
 }
 
-/* Small Mobile */
+/* ================= Small Mobile ================= */
+
 @media (max-width: 480px) {
   .navbar {
-    height: 70px;
+    padding: 0 10px;
   }
 
   .logo {
-    font-size: 1.3rem;
+    font-size: 1.05rem;
   }
 
-  .nav-links {
-    top: 70px;
+  .connect-btn {
+    padding: 7px 10px;
+
+    font-size: 11px;
+  }
+
+  .menu-icon svg {
+    width: 24px;
+
+    height: 24px;
   }
 }

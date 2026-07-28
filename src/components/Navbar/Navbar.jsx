@@ -31,7 +31,8 @@ const Navbar = () => {
         {/* <Moon className="moon-icon" size={22} /> */}
 
         <a href="#contact" className="connect-btn">
-          Let's Connect
+          <span className="desktop-text">Let's Connect</span>
+          <span className="mobile-text">Connect</span>
         </a>
 
         <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
