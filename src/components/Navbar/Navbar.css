@@ -76,6 +76,7 @@
   font-weight: 500;
   cursor: pointer;
   transition: 0.3s;
+  text-decoration: none;
 }
 
 .connect-btn:hover {

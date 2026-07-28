@@ -28,9 +28,11 @@ const Navbar = () => {
       </ul>
 
       <div className="nav-right">
-        <Moon className="moon-icon" size={22} />
+        {/* <Moon className="moon-icon" size={22} /> */}
 
-        <button className="connect-btn">Let's Connect</button>
+        <a href="#contact" className="connect-btn">
+          Let's Connect
+        </a>
 
         <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? <X size={28} /> : <Menu size={28} />}

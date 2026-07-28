@@ -19,6 +19,10 @@
   font-family: "Poppins", sans-serif;
 }
 
+.hero {
+  scroll-margin-top: 80px;
+}
+
 /* LEFT SIDE */
 .hero-left {
   flex: 1;
@@ -59,15 +63,19 @@
 }
 
 .resume-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 32px;
   background: linear-gradient(135deg, #8a5cff, #6d28d9);
   color: white;
   border: none;
-  padding: 16px 32px;
   border-radius: 14px;
   font-size: 17px;
   font-weight: 600;
+  text-decoration: none;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .resume-btn:hover {
@@ -85,6 +93,7 @@
   font-weight: 600;
   cursor: pointer;
   transition: 0.3s ease;
+  text-decoration: none;
 }
 
 .contact-btn:hover {

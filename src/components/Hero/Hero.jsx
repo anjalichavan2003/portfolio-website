@@ -12,26 +12,58 @@ function Hero() {
         </h1>
 
         <p className="intro">
-          MSc Computer Science student specializing in scalable enterprise
-          applications with Java, Spring Boot, and modern React architectures.
+          Full Stack Developer specializing in Java Full Stack and MERN Stack,
+          building scalable, secure, and user-friendly web applications with
+          modern technologies.
         </p>
 
         <p className="desc">
-          Passionate about building robust backend systems and intuitive
-          frontend experiences. Currently bridging the gap between academic
-          theory and industry excellence.
+          Dedicated to writing clean, efficient code, solving real-world
+          problems, and continuously improving my skills to build high-quality
+          software solutions.
         </p>
 
         <div className="hero-buttons">
-          <button className="resume-btn">Download Resume</button>
+          <a
+            href={`${import.meta.env.BASE_URL}Anjali_Chavan_Resume.pdf`}
+            download
+            className="btn resume-btn"
+          >
+            Download Resume
+          </a>
 
-          <button className="contact-btn">Contact Me</button>
+          <a
+            href={`${import.meta.env.BASE_URL}Anjali_Chavan_Resume.pdf`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn contact-btn"
+          >
+            View Resume
+          </a>
+
+          {/* <a href="#contact" className="btn contact-btn">
+            Contact Me
+          </a> */}
         </div>
 
         <div className="social-links">
-          <a href="#">GitHub</a>
-          <a href="#">LinkedIn</a>
-          <a href="#">Email</a>
+          <a
+            href="https://github.com/anjalichavan2003"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/chavananjali/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+
+          <a href="mailto:anjaliychavan6@gmail.com">Email</a>
         </div>
       </div>
 

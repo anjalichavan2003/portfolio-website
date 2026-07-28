@@ -3,14 +3,14 @@ import "./Projects.css";
 import { FaArrowRight } from "react-icons/fa";
 
 import project1 from "../../assets/project1.png";
-import project2 from "../../assets/project1.png";
-import project3 from "../../assets/project1.png";
+import project2 from "../../assets/project2.png";
+import project3 from "../../assets/project3.png";
 
 const projects = [
   {
     title: "Student Management System",
     description:
-      "A comprehensive enterprise-level solution for managing academic records, attendance, and administrative workflows. Built with a robust backend architecture to handle high-volume data transactions efficiently.",
+      "A full-stack web application developed to manage student records, courses, attendance, and academic information. Designed with a user-friendly interface and efficient database management using Java EE technologies.",
     tech: ["Java", "EE", "JSP/Servlet", "Oracle"],
     image: project1,
     github: "#",
@@ -18,16 +18,16 @@ const projects = [
   {
     title: "Clothify E-Commerce",
     description:
-      "A modern full-stack e-commerce platform featuring secure checkout, real-time inventory management, and a personalized user dashboard. Focuses on seamless UX and high-performance backend processing.",
-    tech: ["React.js", "Spring Boot", "REST API"],
+      "A full-stack e-commerce web application that allows users to browse products, manage their cart, and place orders. Developed with a responsive interface and secure REST APIs for a smooth shopping experience.",
+    tech: ["React.js", "Spring Boot", "REST API", "Oracle Database"],
     image: project2,
     github: "#",
   },
   {
     title: "StayNest",
     description:
-      "A high-end property listing and booking application. Implements complex search functionalities, user authentication, and a responsive design optimized for all device sizes.",
-    tech: ["MERN Stack", "Tailwind CSS", "JWT Auth"],
+      "A full-stack property listing web application that allows users to explore, create, edit, and manage property listings. Features user authentication, image uploads, interactive maps, and a responsive design for an enhanced user experience.",
+    tech: ["React.js", "Node.js", "Express.js", "MongoDB"],
     image: project3,
     github: "#",
   },
@@ -39,7 +39,8 @@ function Projects() {
       <div className="projects-header">
         <h2>Featured Projects</h2>
         <p>
-          Demonstrating technical proficiency through real-world applications.
+          These projects reflect my learning, creativity, and hands-on
+          experience in full-stack web development.
         </p>
       </div>
 

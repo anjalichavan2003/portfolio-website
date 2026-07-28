@@ -10,16 +10,27 @@ const Footer = () => {
         </div>
 
         <div className="footer-center">
-          <p>© 2024 Anjali Chavan. Built with precision.</p>
+          <p>© 2026 Anjali Chavan. Designed & Built with ❤️ using React.</p>
         </div>
 
         <div className="footer-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
-          <a href="https://github.com/" target="_blank" rel="noreferrer">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+
+          <a
+            href="https://github.com/anjalichavan2003"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             GitHub
           </a>
-          <a href="https://linkedin.com/" target="_blank" rel="noreferrer">
+
+          <a
+            href="https://www.linkedin.com/in/chavananjali/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             LinkedIn
           </a>
         </div>

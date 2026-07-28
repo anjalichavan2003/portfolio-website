@@ -7,10 +7,10 @@ function About() {
       <div className="about-header">
         <h2>Beyond the Code</h2>
         <p>
-          I am a detail-oriented developer who believes in the power of clean
-          code and architectural integrity. My journey is defined by constant
-          learning and a drive to solve complex problems through software
-          engineering.
+          Passionate about developing modern web applications using Java Full
+          Stack and MERN Stack technologies. I focus on writing clean,
+          maintainable code while creating efficient, user-friendly, and
+          scalable software solutions.
         </p>
       </div>
 
@@ -19,8 +19,9 @@ function About() {
           <GraduationCap size={40} />
           <h3>Education</h3>
           <p>
-            Pursuing MSc in Computer Science (2023-2025) with a focus on
-            advanced algorithms.
+            Graduated with an M.Sc. in Computer Science (2023–2025), building a
+            strong foundation in programming, problem-solving, and software
+            development.
           </p>
         </div>
 
@@ -28,8 +29,9 @@ function About() {
           <Code2 size={40} />
           <h3>Experience</h3>
           <p>
-            Hands-on experience with academic projects and full-stack intensive
-            training programs.
+            Practical experience in developing full-stack web applications
+            through academic projects, a 6-month Full Stack Development
+            internship, and professional training programs.
           </p>
         </div>
 
@@ -37,8 +39,9 @@ function About() {
           <Terminal size={40} />
           <h3>Interests</h3>
           <p>
-            Passionate about Web Development, System Design, and Scalable
-            Architectures.
+            Passionate about Java Full Stack Development, MERN Stack, and Modern
+            Web Technologies. Always eager to learn new technologies and develop
+            innovative software solutions.
           </p>
         </div>
 
@@ -46,8 +49,9 @@ function About() {
           <Target size={40} />
           <h3>Goal</h3>
           <p>
-            Aiming to excel as a Full Stack Java Developer in a high-impact
-            engineering team.
+            Seeking an opportunity as a Full Stack Java and MERN Stack Developer
+            to build innovative web applications, solve real-world challenges,
+            and grow as a software engineer.
           </p>
         </div>
       </div>
