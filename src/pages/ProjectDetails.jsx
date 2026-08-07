@@ -1,5 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { useEffect } from "react";
+import { HashLink } from "react-router-hash-link";
 import {
   FaArrowLeft,
   FaGithub,
@@ -110,10 +111,10 @@ function ProjectDetails() {
   return (
     <div className="details-page">
       <div className="details-container">
-        {/* <Link to="/#projects" className="back-btn">
+        <HashLink smooth to="/#projects" className="back-btn">
           <FaArrowLeft />
           Back to Projects
-        </Link> */}
+        </HashLink>
 
         <h1>{project.title}</h1>
         <br></br>
