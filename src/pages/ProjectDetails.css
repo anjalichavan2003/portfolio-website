@@ -99,7 +99,12 @@
 
   margin-top: 25px;
 }
-
+/* .tech-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+} */
 .tech-list span {
   display: flex;
 

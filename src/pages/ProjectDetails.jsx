@@ -18,7 +18,7 @@ const projectData = {
     title: "StayNest",
     image: project3,
     description:
-      "StayNest is a full-stack property rental platform where users can browse, create, edit and manage property listings. It includes authentication, image upload, reviews, interactive maps and responsive UI.",
+      "StayNest is a full-stack property rental platform where users can browse, create, edit, and manage property listings. It features secure authentication, image uploads, reviews, interactive maps, and a fully responsive user interface.",
 
     tech: [
       "React.js",
@@ -30,17 +30,17 @@ const projectData = {
     ],
 
     features: [
-      "User Authentication",
-      "Add / Edit / Delete Listing",
-      "Image Upload",
-      "Review System",
-      "Interactive Maps",
-      "Responsive Design",
+      "Secure User Authentication and Authorization",
+      "Create, Update, and Delete Property Listings",
+      "Cloudinary Image Upload and Storage",
+      "Property Reviews and Ratings",
+      "Interactive Location Maps",
+      "Responsive UI for Mobile and Desktop",
     ],
 
-    frontend: "https://github.com/yourusername/staynest-frontend",
+    frontend: "https://github.com/anjalichavan2003/sigma-project",
 
-    backend: "https://github.com/yourusername/staynest-backend",
+    backend: "https://github.com/anjalichavan2003/sigma-project",
 
     live: "https://sigma-project-4y4q.onrender.com/listings",
   },
@@ -50,16 +50,27 @@ const projectData = {
     image: project2,
 
     description:
-      "A full-stack e-commerce application developed using React, Spring Boot and Oracle Database.",
+      "Clothify is a full-stack e-commerce web application that provides a seamless online shopping experience. Users can browse products by category, manage their shopping cart, place orders, and securely access their accounts. The application also includes an admin panel for managing products, categories, customers, and orders through RESTful APIs.",
 
-    tech: ["React.js", "Spring Boot", "REST API", "Oracle Database"],
+    tech: [
+      "React.js",
+      "Spring Boot",
+      "Java",
+      "Hibernate",
+      "Oracle Database",
+      "REST API",
+      "HTML",
+      "CSS",
+      "Bootstrap",
+    ],
 
     features: [
-      "User Login",
-      "Shopping Cart",
-      "Product Management",
-      "Admin Dashboard",
-      "Orders",
+      "Secure User Authentication and Authorization",
+      "Category-wise Product Browsing",
+      "Shopping Cart and Order Management",
+      "Admin Dashboard for Product & Category Management",
+      "RESTful API Integration Between Frontend and Backend",
+      "Responsive User Interface",
     ],
 
     frontend: "",
@@ -70,29 +81,40 @@ const projectData = {
   },
 
   "student-management": {
-    title: "Student Management System",
+  title: "Student Management System",
 
-    image: project1,
+  image: project1,
 
-    description:
-      "A Java EE web application for managing students, attendance and courses.",
+  description:
+    "Student Management System is a Java EE web application designed to simplify academic administration. It enables administrators and faculty to efficiently manage student records, course details, attendance, and academic information through a secure and user-friendly interface.",
 
-    tech: ["Java", "JSP", "Servlet", "Oracle"],
+  tech: [
+    "Java",
+    "JSP",
+    "Servlet",
+    "JDBC",
+    "Oracle Database",
+    "HTML",
+    "CSS",
+    "Bootstrap",
+    "Apache Tomcat"
+  ],
 
-    features: [
-      "Student Registration",
-      "Attendance",
-      "Course Management",
-      "Faculty Module",
-      "CRUD Operations",
-    ],
+  features: [
+    "Student Registration and Profile Management",
+    "Course and Subject Management",
+    "Attendance Tracking System",
+    "Faculty and Student Modules",
+    "Complete CRUD Operations with JDBC",
+    "Responsive and User-Friendly Interface"
+  ],
 
-    frontend: "",
+  frontend: "",
 
-    backend: "",
+  backend: "",
 
-    live: "",
-  },
+  live: "",
+},
 };
 
 function ProjectDetails() {
