@@ -47,13 +47,16 @@
 
 // export default Navbar;
 
+
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { HashLink } from "react-router-hash-link";
+import { useLocation } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
 
   const closeMenu = () => setMenuOpen(false);
 
@@ -67,31 +70,66 @@ const Navbar = () => {
       {/* Navigation Links */}
       <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
         <li>
-          <HashLink smooth to="/#home" onClick={closeMenu}>
+          <HashLink
+            smooth
+            to="/#home"
+            className={
+              location.pathname === "/" &&
+              (location.hash === "" || location.hash === "#home")
+                ? "active-nav"
+                : ""
+            }
+            onClick={closeMenu}
+          >
             Home
           </HashLink>
         </li>
 
         <li>
-          <HashLink smooth to="/#about" onClick={closeMenu}>
+          <HashLink
+            smooth
+            to="/#about"
+            className={location.hash === "#about" ? "active-nav" : ""}
+            onClick={closeMenu}
+          >
             About
           </HashLink>
         </li>
 
         <li>
-          <HashLink smooth to="/#skills" onClick={closeMenu}>
+          <HashLink
+            smooth
+            to="/#skills"
+            className={location.hash === "#skills" ? "active-nav" : ""}
+            onClick={closeMenu}
+          >
             Skills
           </HashLink>
         </li>
 
         <li>
-          <HashLink smooth to="/#projects" onClick={closeMenu}>
+          <HashLink
+            smooth
+            to="/#projects"
+            className={
+              location.hash === "#projects" ||
+              location.pathname.startsWith("/project")
+                ? "active-nav"
+                : ""
+            }
+            onClick={closeMenu}
+          >
             Projects
           </HashLink>
         </li>
 
         <li>
-          <HashLink smooth to="/#contact" onClick={closeMenu}>
+          <HashLink
+            smooth
+            to="/#contact"
+            className={location.hash === "#contact" ? "active-nav" : ""}
+            onClick={closeMenu}
+          >
             Contact
           </HashLink>
         </li>

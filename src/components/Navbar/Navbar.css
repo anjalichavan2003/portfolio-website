@@ -223,3 +223,64 @@
     height: 24px;
   }
 }
+
+/* Remove blue tap highlight on mobile */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Or apply only to clickable elements */
+a,
+button,
+.menu-icon,
+.logo {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Remove text selection */
+.logo,
+.menu-icon,
+.connect-btn,
+.nav-links a,
+.hero-name {
+  /* Replace with your banner name class */
+  user-select: none;
+  -webkit-user-select: none;
+}
+.hero-name {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+
+  -webkit-tap-highlight-color: transparent;
+}
+.logo {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.logo:focus,
+.logo:active {
+  outline: none;
+}
+
+/* Navigation Links */
+.nav-links a {
+  color: #d8d8d8;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* Hover */
+.nav-links a:hover {
+  color: #8a5cff;
+}
+
+/* Active Page */
+.nav-links a.active-nav {
+  color: #8a5cff;   /* Same purple as button */
+  font-weight: 700;
+}
