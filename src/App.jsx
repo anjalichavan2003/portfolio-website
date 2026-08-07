@@ -1,25 +1,21 @@
 import { Routes, Route } from "react-router-dom";
-
-import Navbar from "./components/Navbar/Navbar";
-import Hero from "./components/Hero/Hero";
-import About from "./components/About/About";
-import Skills from "./components/Skills/Skills";
-import Projects from "./components/Projects/Projects";
-import Contact from "./components/Contact/Contact";
-import Footer from "./components/Footer/Footer";
-
+import Layout from "./Layout";
 import ProjectDetails from "./pages/ProjectDetails";
+
+import Hero from "./components/Hero/Hero.jsx";
+import About from "./components/About/About.jsx";
+import Skills from "./components/Skills/Skills.jsx";
+import Projects from "./components/Projects/Projects.jsx";
+import Contact from "./components/Contact/Contact.jsx";
 
 function Home() {
   return (
     <>
-      <Navbar />
       <Hero />
       <About />
       <Skills />
       <Projects />
       <Contact />
-      <Footer />
     </>
   );
 }
@@ -27,9 +23,10 @@ function Home() {
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-
-      <Route path="/project/:id" element={<ProjectDetails />} />
+      <Route element={<Layout />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/project/:id" element={<ProjectDetails />} />
+      </Route>
     </Routes>
   );
 }

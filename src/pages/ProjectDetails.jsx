@@ -1,4 +1,11 @@
 import { useParams, Link } from "react-router-dom";
+import { useEffect } from "react";
+import {
+  FaArrowLeft,
+  FaGithub,
+  FaExternalLinkAlt,
+  FaCheckCircle,
+} from "react-icons/fa";
 import "./ProjectDetails.css";
 
 import project1 from "../assets/project1.png";
@@ -23,7 +30,7 @@ const projectData = {
 
     features: [
       "User Authentication",
-      "Add/Edit/Delete Listing",
+      "Add / Edit / Delete Listing",
       "Image Upload",
       "Review System",
       "Interactive Maps",
@@ -39,25 +46,24 @@ const projectData = {
 
   clothify: {
     title: "Clothify E-Commerce",
-
     image: project2,
 
     description:
-      "A full-stack e-commerce application developed using React, Spring Boot and Oracle Database. Users can browse products, manage cart and place orders.",
+      "A full-stack e-commerce application developed using React, Spring Boot and Oracle Database.",
 
     tech: ["React.js", "Spring Boot", "REST API", "Oracle Database"],
 
     features: [
       "User Login",
-      "Product Management",
       "Shopping Cart",
-      "Orders",
+      "Product Management",
       "Admin Dashboard",
+      "Orders",
     ],
 
-    frontend: "https://github.com/yourusername/clothify-frontend",
+    frontend: "",
 
-    backend: "https://github.com/yourusername/clothify-backend",
+    backend: "",
 
     live: "",
   },
@@ -68,7 +74,7 @@ const projectData = {
     image: project1,
 
     description:
-      "A web application for managing students, attendance, courses and academic information using Java EE.",
+      "A Java EE web application for managing students, attendance and courses.",
 
     tech: ["Java", "JSP", "Servlet", "Oracle"],
 
@@ -82,7 +88,7 @@ const projectData = {
 
     frontend: "",
 
-    backend: "https://github.com/yourusername/student-management",
+    backend: "",
 
     live: "",
   },
@@ -90,6 +96,10 @@ const projectData = {
 
 function ProjectDetails() {
   const { id } = useParams();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
 
   const project = projectData[id];
 
@@ -99,52 +109,67 @@ function ProjectDetails() {
 
   return (
     <div className="details-page">
-      <Link to="/" className="back-btn">
-        ← Back
-      </Link>
+      <div className="details-container">
+        {/* <Link to="/#projects" className="back-btn">
+          <FaArrowLeft />
+          Back to Projects
+        </Link> */}
 
-      <img src={project.image} alt={project.title} className="banner" />
+        <h1>{project.title}</h1>
+        <br></br>
+        <img
+          src={project.image}
+          alt={project.title}
+          className="project-banner"
+        />
 
-      <h1>{project.title}</h1>
+        <div className="project-info">
+          <p>{project.description}</p>
 
-      <p>{project.description}</p>
+          <h2>Tech Stack</h2>
 
-      <h2>Tech Stack</h2>
+          <div className="tech-list">
+            {project.tech.map((tech, index) => (
+              <span key={index}>{tech}</span>
+            ))}
+          </div>
 
-      <div className="tech-list">
-        {project.tech.map((tech, index) => (
-          <span key={index}>{tech}</span>
-        ))}
-      </div>
+          <h2>Key Features</h2>
 
-      <h2>Key Features</h2>
+          <div className="feature-grid">
+            {project.features.map((feature, index) => (
+              <div className="feature-card" key={index}>
+                <FaCheckCircle />
+                <span>{feature}</span>
+              </div>
+            ))}
+          </div>
 
-      <ul>
-        {project.features.map((feature, index) => (
-          <li key={index}>{feature}</li>
-        ))}
-      </ul>
+          <div className="buttons">
+            {project.frontend && (
+              <a href={project.frontend} target="_blank" rel="noreferrer">
+                <FaGithub />
+                Frontend
+              </a>
+            )}
 
-      <div className="buttons">
-        {project.frontend && (
-          <a href={project.frontend} target="_blank" rel="noreferrer">
-            Frontend Code
-          </a>
-        )}
+            {project.backend && (
+              <a href={project.backend} target="_blank" rel="noreferrer">
+                <FaGithub />
+                Backend
+              </a>
+            )}
 
-        {project.backend && (
-          <a href={project.backend} target="_blank" rel="noreferrer">
-            Backend Code
-          </a>
-        )}
-
-        {project.live ? (
-          <a href={project.live} target="_blank" rel="noreferrer">
-            Live Demo
-          </a>
-        ) : (
-          <button disabled>Live Demo Coming Soon</button>
-        )}
+            {project.live ? (
+              <a href={project.live} target="_blank" rel="noreferrer">
+                <FaExternalLinkAlt />
+                Live Demo
+              </a>
+            ) : (
+              <button disabled>Coming Soon</button>
+            )}
+          </div>
+        </div>
       </div>
     </div>
   );
