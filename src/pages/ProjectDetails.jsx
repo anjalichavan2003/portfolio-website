@@ -73,48 +73,48 @@ const projectData = {
       "Responsive User Interface",
     ],
 
+    frontend: "https://github.com/anjalichavan2003/Clothify_Frontend",
+
+    backend: "https://github.com/anjalichavan2003/Clothify_Backend",
+
+    live: "",
+  },
+
+  "student-management": {
+    title: "Student Management System",
+
+    image: project1,
+
+    description:
+      "Student Management System is a Java EE web application designed to simplify academic administration. It enables administrators and faculty to efficiently manage student records, course details, attendance, and academic information through a secure and user-friendly interface.",
+
+    tech: [
+      "Java",
+      "JSP",
+      "Servlet",
+      "JDBC",
+      "Oracle Database",
+      "HTML",
+      "CSS",
+      "Bootstrap",
+      "Apache Tomcat",
+    ],
+
+    features: [
+      "Student Registration and Profile Management",
+      "Course and Subject Management",
+      "Attendance Tracking System",
+      "Faculty and Student Modules",
+      "Complete CRUD Operations with JDBC",
+      "Responsive and User-Friendly Interface",
+    ],
+
     frontend: "",
 
     backend: "",
 
     live: "",
   },
-
-  "student-management": {
-  title: "Student Management System",
-
-  image: project1,
-
-  description:
-    "Student Management System is a Java EE web application designed to simplify academic administration. It enables administrators and faculty to efficiently manage student records, course details, attendance, and academic information through a secure and user-friendly interface.",
-
-  tech: [
-    "Java",
-    "JSP",
-    "Servlet",
-    "JDBC",
-    "Oracle Database",
-    "HTML",
-    "CSS",
-    "Bootstrap",
-    "Apache Tomcat"
-  ],
-
-  features: [
-    "Student Registration and Profile Management",
-    "Course and Subject Management",
-    "Attendance Tracking System",
-    "Faculty and Student Modules",
-    "Complete CRUD Operations with JDBC",
-    "Responsive and User-Friendly Interface"
-  ],
-
-  frontend: "",
-
-  backend: "",
-
-  live: "",
-},
 };
 
 function ProjectDetails() {
