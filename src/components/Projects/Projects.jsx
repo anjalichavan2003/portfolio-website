@@ -121,7 +121,7 @@ const projects = [
 
 function Projects() {
   return (
-    <section className="projects-section" id="projects">
+    <section id="projects" className="projects-section">
       <div className="projects-header">
         <h2>Featured Projects</h2>
         <p>

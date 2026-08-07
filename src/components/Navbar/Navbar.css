@@ -281,6 +281,11 @@ button,
 
 /* Active Page */
 .nav-links a.active-nav {
-  color: #8a5cff;   /* Same purple as button */
+  color: #8a5cff; /* Same purple as button */
+  font-weight: 700;
+}
+
+.nav-links a.active-nav {
+  color: #8a5cff;
   font-weight: 700;
 }

@@ -47,8 +47,115 @@
 
 // export default Navbar;
 
+// import React, { useState } from "react";
+// import { Menu, X } from "lucide-react";
+// import { HashLink } from "react-router-hash-link";
+// import { useLocation } from "react-router-dom";
+// import "./Navbar.css";
 
-import React, { useState } from "react";
+// const Navbar = () => {
+//   const [menuOpen, setMenuOpen] = useState(false);
+//   const location = useLocation();
+
+//   const closeMenu = () => setMenuOpen(false);
+
+//   return (
+//     <nav className="navbar">
+//       {/* Logo */}
+//       <HashLink smooth to="/#home" className="logo" onClick={closeMenu}>
+//         Anjali Chavan
+//       </HashLink>
+
+//       {/* Navigation Links */}
+//       <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
+//         <li>
+//           <HashLink
+//             smooth
+//             to="/#home"
+//             className={
+//               location.pathname === "/" &&
+//               (location.hash === "" || location.hash === "#home")
+//                 ? "active-nav"
+//                 : ""
+//             }
+//             onClick={closeMenu}
+//           >
+//             Home
+//           </HashLink>
+//         </li>
+
+//         <li>
+//           <HashLink
+//             smooth
+//             to="/#about"
+//             className={location.hash === "#about" ? "active-nav" : ""}
+//             onClick={closeMenu}
+//           >
+//             About
+//           </HashLink>
+//         </li>
+
+//         <li>
+//           <HashLink
+//             smooth
+//             to="/#skills"
+//             className={location.hash === "#skills" ? "active-nav" : ""}
+//             onClick={closeMenu}
+//           >
+//             Skills
+//           </HashLink>
+//         </li>
+
+//         <li>
+//           <HashLink
+//             smooth
+//             to="/#projects"
+//             className={
+//               location.hash === "#projects" ||
+//               location.pathname.startsWith("/project")
+//                 ? "active-nav"
+//                 : ""
+//             }
+//             onClick={closeMenu}
+//           >
+//             Projects
+//           </HashLink>
+//         </li>
+
+//         <li>
+//           <HashLink
+//             smooth
+//             to="/#contact"
+//             className={location.hash === "#contact" ? "active-nav" : ""}
+//             onClick={closeMenu}
+//           >
+//             Contact
+//           </HashLink>
+//         </li>
+//       </ul>
+
+//       {/* Right Side */}
+//       <div className="nav-right">
+//         <HashLink
+//           smooth
+//           to="/#contact"
+//           className="connect-btn"
+//           onClick={closeMenu}
+//         >
+//           <span className="desktop-text">Let's Connect</span>
+//           <span className="mobile-text">Connect</span>
+//         </HashLink>
+
+//         <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
+//           {menuOpen ? <X size={28} /> : <Menu size={28} />}
+//         </div>
+//       </div>
+//     </nav>
+//   );
+// };
+
+// export default Navbar;
+import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { HashLink } from "react-router-hash-link";
 import { useLocation } from "react-router-dom";
@@ -56,9 +163,44 @@ import "./Navbar.css";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
   const location = useLocation();
 
   const closeMenu = () => setMenuOpen(false);
+
+  useEffect(() => {
+    // Keep Projects active on Project Details page
+    if (location.pathname.startsWith("/project")) {
+      setActiveSection("projects");
+      return;
+    }
+
+    const handleScroll = () => {
+      const sections = document.querySelectorAll("section[id]");
+
+      let currentSection = "home";
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 120; // Navbar height
+        const sectionHeight = section.offsetHeight;
+
+        if (
+          window.scrollY >= sectionTop &&
+          window.scrollY < sectionTop + sectionHeight
+        ) {
+          currentSection = section.id;
+        }
+      });
+
+      setActiveSection(currentSection);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [location.pathname]);
 
   return (
     <nav className="navbar">
@@ -67,18 +209,13 @@ const Navbar = () => {
         Anjali Chavan
       </HashLink>
 
-      {/* Navigation Links */}
+      {/* Navigation */}
       <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
         <li>
           <HashLink
             smooth
             to="/#home"
-            className={
-              location.pathname === "/" &&
-              (location.hash === "" || location.hash === "#home")
-                ? "active-nav"
-                : ""
-            }
+            className={activeSection === "home" ? "active-nav" : ""}
             onClick={closeMenu}
           >
             Home
@@ -89,7 +226,7 @@ const Navbar = () => {
           <HashLink
             smooth
             to="/#about"
-            className={location.hash === "#about" ? "active-nav" : ""}
+            className={activeSection === "about" ? "active-nav" : ""}
             onClick={closeMenu}
           >
             About
@@ -100,7 +237,7 @@ const Navbar = () => {
           <HashLink
             smooth
             to="/#skills"
-            className={location.hash === "#skills" ? "active-nav" : ""}
+            className={activeSection === "skills" ? "active-nav" : ""}
             onClick={closeMenu}
           >
             Skills
@@ -111,12 +248,7 @@ const Navbar = () => {
           <HashLink
             smooth
             to="/#projects"
-            className={
-              location.hash === "#projects" ||
-              location.pathname.startsWith("/project")
-                ? "active-nav"
-                : ""
-            }
+            className={activeSection === "projects" ? "active-nav" : ""}
             onClick={closeMenu}
           >
             Projects
@@ -127,7 +259,7 @@ const Navbar = () => {
           <HashLink
             smooth
             to="/#contact"
-            className={location.hash === "#contact" ? "active-nav" : ""}
+            className={activeSection === "contact" ? "active-nav" : ""}
             onClick={closeMenu}
           >
             Contact
