@@ -83,3 +83,20 @@
     padding: 80px 6%;
   }
 }
+
+/* ================= TABLET ================= */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .skills-section {
+    padding: 80px 6%;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .skill-card {
+    padding: 24px;
+  }
+}
