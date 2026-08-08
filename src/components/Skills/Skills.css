@@ -100,3 +100,19 @@
     padding: 24px;
   }
 }
+/* ================= TABLET / SMALL DESKTOP ================= */
+
+@media (min-width: 769px) and (max-width: 1280px) {
+  .skills-section {
+    padding: 80px 6%;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .skill-card {
+    padding: 24px;
+  }
+}
