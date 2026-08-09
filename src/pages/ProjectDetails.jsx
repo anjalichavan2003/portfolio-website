@@ -183,13 +183,11 @@ function ProjectDetails() {
               </a>
             )}
 
-            {project.live ? (
+            {project.live && (
               <a href={project.live} target="_blank" rel="noreferrer">
                 <FaExternalLinkAlt />
                 Live Demo
               </a>
-            ) : (
-              <button disabled>Coming Soon</button>
             )}
           </div>
         </div>
