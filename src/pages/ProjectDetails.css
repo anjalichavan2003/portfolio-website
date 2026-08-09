@@ -1,5 +1,5 @@
 /* ===========================================
-   PROJECT DETAILS
+   PROJECT DETAILS PAGE
 =========================================== */
 
 .details-page {
@@ -22,16 +22,51 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
+
+  padding: 10px 18px;
+  border-radius: 10px;
+
   text-decoration: none;
-  color: #8b5cf6;
+  color: #d6dce5;
+
+  background: rgba(139, 92, 246, 0.08);
+  border: 1px solid rgba(139, 92, 246, 0.25);
+
+  font-size: 15px;
   font-weight: 600;
+
   margin-bottom: 30px;
-  transition: 0.3s;
+
+  transition: all 0.3s ease;
+}
+
+.back-btn svg {
+  font-size: 14px;
+  color: #8b5cf6;
+  transition: transform 0.3s ease;
 }
 
 .back-btn:hover {
+  color: #ffffff;
+  background: rgba(139, 92, 246, 0.16);
+  border-color: #8b5cf6;
+  transform: translateX(-4px);
+}
+
+.back-btn:hover svg {
+  transform: translateX(-3px);
   color: #00c6ff;
-  transform: translateX(-5px);
+}
+
+/* ===========================================
+   PROJECT TITLE
+=========================================== */
+
+.details-container h1 {
+  font-size: 35px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 25px;
 }
 
 /* ===========================================
@@ -42,47 +77,61 @@
   width: 70%;
   border-radius: 20px;
   display: block;
+
   margin-bottom: 50px;
+
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+
   border: 2px solid rgba(255, 255, 255, 0.08);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.project-banner:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.55);
 }
 
 /* ===========================================
-   PROJECT INFO
+   PROJECT DESCRIPTION
 =========================================== */
-
-.details-container h1 {
-  font-size: 35px;
-  /* margin-bottom: 20px; */
-  color: white;
-}
 
 .project-info p {
   color: #d6dce5;
   font-size: 18px;
   line-height: 1.9;
+
   margin-bottom: 45px;
 }
 
 /* ===========================================
-   HEADINGS
+   SECTION HEADINGS
 =========================================== */
 
 .project-info h2 {
   font-size: 28px;
   margin: 45px 0 25px;
+
   color: #8b5cf6;
+
   position: relative;
 }
 
 .project-info h2::after {
   content: "";
+
   position: absolute;
+
   width: 70px;
   height: 3px;
+
   background: linear-gradient(to right, #8b5cf6, #00c6ff);
+
   left: 0;
   bottom: -8px;
+
   border-radius: 30px;
 }
 
@@ -99,17 +148,10 @@
 
   margin-top: 25px;
 }
-/* .tech-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 12px;
-  margin-top: 20px;
-} */
+
 .tech-list span {
   display: flex;
-
   justify-content: center;
-
   align-items: center;
 
   text-align: center;
@@ -122,15 +164,19 @@
 
   border: 1px solid rgba(139, 92, 246, 0.25);
 
-  transition: 0.3s;
-
   font-weight: 600;
+
+  transition: all 0.3s ease;
 }
 
 .tech-list span:hover {
+  color: #ffffff;
+
   background: linear-gradient(135deg, #8b5cf6, #00c6ff);
 
   transform: translateY(-4px);
+
+  box-shadow: 0 8px 20px rgba(0, 198, 255, 0.2);
 }
 
 /* ===========================================
@@ -149,7 +195,6 @@
 
 .feature-card {
   display: flex;
-
   align-items: center;
 
   gap: 15px;
@@ -162,7 +207,7 @@
 
   border-radius: 15px;
 
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
 .feature-card:hover {
@@ -174,6 +219,8 @@
 }
 
 .feature-card svg {
+  flex-shrink: 0;
+
   color: #00c6ff;
 
   font-size: 20px;
@@ -183,6 +230,8 @@
   color: #dfe7f4;
 
   font-size: 16px;
+
+  line-height: 1.5;
 }
 
 /* ===========================================
@@ -199,12 +248,10 @@
   margin-top: 50px;
 }
 
-.buttons a,
-.buttons button {
+.buttons a {
   display: flex;
 
   align-items: center;
-
   justify-content: center;
 
   gap: 10px;
@@ -217,17 +264,11 @@
 
   text-decoration: none;
 
-  transition: 0.3s;
+  color: #ffffff;
 
-  border: none;
-
-  cursor: pointer;
-}
-
-.buttons a {
   background: linear-gradient(135deg, #8b5cf6, #00c6ff);
 
-  color: white;
+  transition: all 0.3s ease;
 }
 
 .buttons a:hover {
@@ -236,24 +277,29 @@
   box-shadow: 0 12px 25px rgba(0, 198, 255, 0.35);
 }
 
-.buttons button {
-  background: #555;
-
-  color: white;
-
-  cursor: not-allowed;
+.buttons a svg {
+  font-size: 16px;
 }
+
 /* ===========================================
-   1200px
+   LARGE DESKTOP
 =========================================== */
 
 @media (max-width: 1200px) {
   .details-page {
-    padding: 50px 6% 70px;
+    padding: 55px 6% 70px;
   }
 
-  .project-info h1 {
-    font-size: 46px;
+  .details-container {
+    max-width: 1100px;
+  }
+
+  .project-banner {
+    width: 75%;
+  }
+
+  .details-container h1 {
+    font-size: 34px;
   }
 
   .project-info p {
@@ -262,7 +308,7 @@
 }
 
 /* ===========================================
-   992px
+   TABLET
 =========================================== */
 
 @media (max-width: 992px) {
@@ -270,83 +316,59 @@
     padding: 50px 5% 60px;
   }
 
-  .project-banner {
-    margin-bottom: 40px;
-  }
-
-  .details-container h1 {
-    font-size: 25px;
-  }
-
-  .project-info h2 {
-    font-size: 25px;
-  }
-
-  .tech-list {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-  }
-
-  .tech-list span {
-    font-size: 14px;
-    padding: 12px;
-  }
-
-  .feature-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .buttons {
-    gap: 15px;
-  }
-}
-
-/* ===========================================
-   768px
-=========================================== */
-
-@media (max-width: 768px) {
-  .details-page {
-    padding: 50px 20px 50px;
-  }
+  /* Back button */
 
   .back-btn {
+    padding: 9px 16px;
+
     font-size: 15px;
+
+    margin-bottom: 25px;
   }
 
-  .project-banner {
-    width: 100%;
-    border-radius: 15px;
-    margin-bottom: 30px;
-  }
+  /* Title */
 
   .details-container h1 {
     font-size: 32px;
-    text-align: center;
+
+    margin-bottom: 25px;
   }
 
-  .project-info p {
-    font-size: 15px;
-    text-align: left;
-    margin-bottom: 30px;
+  /* Banner */
+
+  .project-banner {
+    width: 85%;
+
+    border-radius: 18px;
+
+    margin-bottom: 40px;
   }
+
+  /* Headings */
 
   .project-info h2 {
-    font-size: 22px;
+    font-size: 25px;
   }
 
+  /* Tech */
+
   .tech-list {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+
     gap: 12px;
   }
 
   .tech-list span {
-    padding: 12px;
     font-size: 14px;
+
+    padding: 12px;
   }
 
+  /* Features */
+
   .feature-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+
     gap: 15px;
   }
 
@@ -358,50 +380,110 @@
     font-size: 15px;
   }
 
+  /* Buttons */
+
   .buttons {
-    flex-direction: column;
+    gap: 15px;
   }
 
-  .buttons a,
-  .buttons button {
-    width: 100%;
+  .buttons a {
+    padding: 14px 24px;
   }
 }
 
 /* ===========================================
-   576px
+   MOBILE
 =========================================== */
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .details-page {
-    padding: 50px 15px 40px;
+    padding: 50px 20px 50px;
   }
 
-  .details-container h1 {
-    font-size: 28px;
-  }
+  /* Back button */
 
-  .project-info h2 {
-    font-size: 20px;
-  }
+  .back-btn {
+    padding: 8px 14px;
 
-  .project-info p {
     font-size: 14px;
-    line-height: 1.8;
+
+    gap: 8px;
+
+    margin-bottom: 22px;
   }
 
-  .tech-list {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-  }
-
-  .tech-list span {
-    padding: 10px;
+  .back-btn svg {
     font-size: 13px;
   }
 
+  /* Title */
+
+  .details-container h1 {
+    font-size: 30px;
+
+    text-align: center;
+
+    margin-bottom: 25px;
+  }
+
+  /* Banner */
+
+  .project-banner {
+    width: 100%;
+
+    border-radius: 15px;
+
+    margin-bottom: 30px;
+  }
+
+  /* Description */
+
+  .project-info p {
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    text-align: left;
+
+    margin-bottom: 30px;
+  }
+
+  /* Headings */
+
+  .project-info h2 {
+    font-size: 22px;
+
+    margin: 35px 0 22px;
+  }
+
+  /* Tech */
+
+  .tech-list {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+
+    margin-top: 20px;
+  }
+
+  .tech-list span {
+    padding: 12px;
+
+    font-size: 14px;
+  }
+
+  /* Features */
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+  }
+
   .feature-card {
-    padding: 15px;
+    padding: 16px;
+
+    gap: 12px;
   }
 
   .feature-card svg {
@@ -409,48 +491,190 @@
   }
 
   .feature-card span {
+    font-size: 15px;
+  }
+
+  /* Buttons */
+
+  .buttons {
+    flex-direction: column;
+
+    gap: 12px;
+
+    margin-top: 35px;
+  }
+
+  .buttons a {
+    width: 100%;
+
+    padding: 14px 20px;
+  }
+}
+
+/* ===========================================
+   SMALL MOBILE
+=========================================== */
+
+@media (max-width: 576px) {
+  .details-page {
+    padding: 45px 15px 40px;
+  }
+
+  /* Back button */
+
+  .back-btn {
+    padding: 8px 13px;
+
+    font-size: 14px;
+
+    margin-bottom: 18px;
+  }
+
+  /* Title */
+
+  .details-container h1 {
+    font-size: 28px;
+
+    margin-bottom: 20px;
+  }
+
+  /* Banner */
+
+  .project-banner {
+    width: 100%;
+
+    border-radius: 13px;
+
+    margin-bottom: 25px;
+  }
+
+  /* Description */
+
+  .project-info p {
+    font-size: 14px;
+
+    line-height: 1.8;
+  }
+
+  /* Headings */
+
+  .project-info h2 {
+    font-size: 20px;
+
+    margin: 32px 0 20px;
+  }
+
+  /* Tech */
+
+  .tech-list {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 10px;
+  }
+
+  .tech-list span {
+    padding: 10px;
+
+    font-size: 13px;
+  }
+
+  /* Features */
+
+  .feature-card {
+    padding: 15px;
+  }
+
+  .feature-card span {
+    font-size: 14px;
+  }
+
+  /* Buttons */
+
+  .buttons a {
+    padding: 13px;
+
     font-size: 14px;
   }
 }
 
 /* ===========================================
-   400px
+   VERY SMALL MOBILE
 =========================================== */
 
 @media (max-width: 400px) {
   .details-page {
-    padding: 50px 12px 30px;
+    padding: 40px 12px 30px;
   }
+
+  /* Back button */
+
+  .back-btn {
+    padding: 7px 12px;
+
+    font-size: 13px;
+
+    gap: 7px;
+  }
+
+  /* Title */
+
   .details-container h1 {
     font-size: 24px;
   }
+
+  /* Description */
 
   .project-info p {
     font-size: 13px;
   }
 
+  /* Tech */
+
   .tech-list {
     grid-template-columns: repeat(2, 1fr);
+
     gap: 8px;
   }
 
   .tech-list span {
     padding: 9px;
+
     font-size: 12px;
   }
 
-  .buttons a,
-  .buttons button {
+  /* Features */
+
+  .feature-card {
+    padding: 13px;
+  }
+
+  .feature-card svg {
+    font-size: 17px;
+  }
+
+  .feature-card span {
+    font-size: 13px;
+  }
+
+  /* Buttons */
+
+  .buttons a {
     padding: 12px;
-    font-size: 14px;
+
+    font-size: 13px;
   }
 }
 
 /* ===========================================
-   340px
+   EXTRA SMALL DEVICES
 =========================================== */
 
 @media (max-width: 340px) {
+  .details-page {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
   .tech-list {
     grid-template-columns: 1fr;
   }
@@ -458,33 +682,8 @@
   .details-container h1 {
     font-size: 22px;
   }
-}
 
-.back-btn {
-  display: none;
-}
-/* Tablet */
-@media (max-width: 992px) {
-  .back-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
-    color: #8b5cf6;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 16px;
-  }
-
-  .back-btn:hover {
-    color: #00c6ff;
-  }
-}
-
-/* Mobile */
-@media (max-width: 576px) {
-  .back-btn {
-    font-size: 15px;
-    margin-bottom: 15px;
+  .project-info h2 {
+    font-size: 19px;
   }
 }
