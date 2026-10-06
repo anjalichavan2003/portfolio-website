@@ -258,6 +258,17 @@ const Navbar = () => {
         <li>
           <HashLink
             smooth
+            to="/#certificates"
+            className={activeSection === "certificates" ? "active-nav" : ""}
+            onClick={closeMenu}
+          >
+            Certificates
+          </HashLink>
+        </li>
+
+        <li>
+          <HashLink
+            smooth
             to="/#contact"
             className={activeSection === "contact" ? "active-nav" : ""}
             onClick={closeMenu}
