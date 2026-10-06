@@ -57,7 +57,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="contact-item">
+          {/* <div className="contact-item">
             <div className="icon-box">
               <FaPhoneAlt />
             </div>
@@ -65,7 +65,7 @@ const Contact = () => {
               <h4>PHONE</h4>
               <span>+91 9022645718</span>
             </div>
-          </div>
+          </div> */}
 
           <div className="contact-item">
             <div className="icon-box">
