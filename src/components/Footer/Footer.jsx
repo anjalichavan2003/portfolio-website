@@ -10,7 +10,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-center">
-          <p>© 2026 Anjali Chavan. Designed & Built with ❤️ using React.</p>
+          <p>© 2026 Where creativity meets technology.</p>
         </div>
 
         <div className="footer-links">

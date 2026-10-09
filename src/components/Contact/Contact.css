@@ -25,6 +25,9 @@
   font-size: 3rem;
   margin-bottom: 40px;
   color: #e6e8ff;
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .contact-info p {

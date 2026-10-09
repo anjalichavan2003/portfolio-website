@@ -13,13 +13,15 @@
 
 .footer-logo h2 {
   color: #e6e8ff;
-  font-size: 2.2rem;
+  font-size: 1.4rem;
   font-weight: 700;
+   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .footer-center p {
   color: #c6c7d9;
   font-size: 1rem;
+   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .footer-links {
@@ -32,6 +34,7 @@
   color: #d4d6ea;
   font-size: 1rem;
   transition: 0.3s ease;
+   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .footer-links a:hover {

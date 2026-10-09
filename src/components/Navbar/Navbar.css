@@ -20,10 +20,11 @@
 /* Logo */
 
 .logo {
-  color: #d8d8d8;
+  color: #8a5cff;
   font-size: 2rem;
   font-weight: bold;
-  font-family: Georgia, serif;
+  /* font-family: Georgia, serif; */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   cursor: pointer;
   text-decoration: none;
 }
@@ -41,6 +42,7 @@
   text-decoration: none;
   font-size: 1.1rem;
   transition: 0.3s;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .nav-links a:hover {
@@ -85,10 +87,12 @@
 
 .desktop-text {
   display: inline;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .mobile-text {
   display: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Moon */

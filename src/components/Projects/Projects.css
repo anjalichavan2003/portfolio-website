@@ -12,6 +12,9 @@
 .projects-header h2 {
   font-size: 3rem;
   margin-bottom: 15px;
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .projects-header p {
