@@ -15,15 +15,15 @@
   margin: 0 auto;
 }
 
-/* ================= HEADING ================= */
-
 .skills-title {
   margin: 0 0 14px;
   color: #e8e8ff;
   font-size: 2.8rem;
   font-weight: 700;
   text-align: center;
-   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .skills-subtitle {
