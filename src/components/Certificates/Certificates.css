@@ -155,7 +155,6 @@
   pointer-events: none;
 }
 
-
 .certificate-content {
   position: relative;
 
@@ -185,7 +184,6 @@
   font-size: 14px;
   font-weight: 600;
 }
-
 
 .certificate-info {
   display: flex;
