@@ -162,8 +162,6 @@
   }
 }
 
-/* ================= MOBILE ================= */
-
 @media (max-width: 600px) {
   .skills-section {
     min-height: auto;
