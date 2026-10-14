@@ -210,8 +210,6 @@
   }
 }
 
-/* ================= SMALL MOBILE ================= */
-
 @media (max-width: 360px) {
   .skills-section {
     padding: 50px 14px;
@@ -226,8 +224,6 @@
     padding: 8px 9px;
   }
 }
-
-/* ================= ACCESSIBILITY ================= */
 
 @media (prefers-reduced-motion: reduce) {
   .skill-card,
